@@ -257,6 +257,10 @@ def kruskal(graph):
  b) Ağırlıklı bir Graf<br>
  <br>
  c) Döngülü bir Graf<br>
+ <br>
+ d) Ağırlıksız bir Graf<br>
+ <br>
+ e) Yönlü bir Graf<br>
 
 ####Küçük Test
 
@@ -269,16 +273,28 @@ def kruskal(graph):
 <td>3.resim</td>
 </tr>
 <tr>
-<td><img src="pics/r1.png" style="float: center" width=150 height=150></td>
-<td><img src="pics/r2.png" style="float: center" width=150 height=150></td>
-<td><img src="pics/r3.png" style="float: center" width=150 height=150></td>
+<td><img src="pics/r1.png" style="float: center" width=75 height=75></td>
+<td><img src="pics/r2.png" style="float: center" width=75 height=75></td>
+<td><img src="pics/r3.png" style="float: center" width=75 height=75></td>
+</tr>
+<tr>
+<td>4.resim</td>
+<td>5.resim</td>
+</tr>
+<tr>
+<td><img src="pics/r4.png" style="float: center" width=75 height=75></td>
+<td><img src="pics/r5.gif" style="float: center" width=75 height=75></td>
 </tr>
 </table>
- a) Hepsi<br> 
+ a) 1-2-3<br> 
  <br>
- b) Sadece 2.resim<br>
+ b) 2-3-4<br>
  <br>
- c) 1.resim ve 2.resim<br>
+ c) 3-4-5<br>
+ <br>
+ d) 2-3-5<br>
+ <br>
+ e) 1-2-4<br>
 
 ####Küçük Test
 
@@ -289,8 +305,12 @@ def kruskal(graph):
  b) Prim ve Kruskal Algoritmalarının ikisi de her zaman aynı uzunluktaki sonucu verecektir<br>
  <br>
  c) Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıdır.<br>
+ <br>
+ d) Prim algoritması matematikçi Vojtech Jarnik tarafından bulunmuştur.
+ <br>
+ e) Kruskal algoritması Joseph Kruskal tarafından geliştirilmiştir.
 
 ####Küçük Test Cevap Anahtarı
 - Cevap1: b) Ağırlıklı bir Graf<br>
-- Cevap2: a) Hepsi<br>
+- Cevap2: a) 1-2-3<br>
 - Cevap3: a) Prim algoritması Kruskal algoritmasının seçtiği kenarın aynısını seçmektedir.<br>
