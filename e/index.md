@@ -265,7 +265,6 @@ def kruskal(graph):
 ####Küçük Test
 
 - Soru2: Aşağıdakilerden hangisi Ağaçtır?<br>
- <br>
 <table>
 <tr>
 <td>1.resim</td>
@@ -280,21 +279,15 @@ def kruskal(graph):
 <tr>
 <td>4.resim</td>
 <td>5.resim</td>
+<td>6.resim</td>
 </tr>
 <tr>
 <td><img src="pics/r4.png" style="float: center" width=75 height=75></td>
 <td><img src="pics/r5.gif" style="float: center" width=75 height=75></td>
+<td><img src="pics/r6.gif" style="float: center" width=75 height=75></td>
 </tr>
 </table>
- a) 1-2-3<br> 
- <br>
- b) 2-3-4<br>
- <br>
- c) 3-4-5<br>
- <br>
- d) 2-3-5<br>
- <br>
- e) 1-2-4<br>
+ a) 1-2-3 <br> b) 2-3-4 <br> c) 3-4-5 <br> d) 4-5-6 <br> e) 2-3-6
 
 ####Küçük Test
 
@@ -306,7 +299,7 @@ def kruskal(graph):
  <br>
  c) Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıdır.<br>
  <br>
- d) Prim algoritması matematikçi Vojtech Jarnik tarafından bulunmuştur.
+ d) Prim algoritması matematikçi Vojtech Jarnik tarafından bulunmuştur.<br>
  <br>
  e) Kruskal algoritması Joseph Kruskal tarafından geliştirilmiştir.
 
