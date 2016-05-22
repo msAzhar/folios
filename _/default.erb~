@@ -1,0 +1,16 @@
+#   <%= foliotitle %>
+
+.fx: first
+
+<%= author %> 
+
+`<<%= email %>>`
+
+~ONDOKUZ MAYIS ÜNİVERSİTESİ~
+Bilgisayar Mühendisliği
+
+http://<%= domain %>/
+
+<%= `date +'%B %Y'`.chomp %>
+
+---
