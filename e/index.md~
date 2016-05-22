@@ -299,7 +299,7 @@ def kruskal(graph):
  <br>
  c) Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıdır.<br>
  <br>
- d) Prim algoritması matematikçi Vojtech Jarnik tarafından bulunmuştur.
+ d) Prim algoritması matematikçi Vojtech Jarnik tarafından bulunmuştur.<br>
  <br>
  e) Kruskal algoritması Joseph Kruskal tarafından geliştirilmiştir.
 

@@ -221,6 +221,9 @@ def kruskal(graph):
 	    
     return sorted(minimum_spanning_tree)
 ```
+
+[Kruskal Algoritmasının tam kodu.](https://gist.github.com/msAzhar/b51d7dc21c939c53209d5a2dda3fc8ad)
+
 ####Prim ve Kruskal Algoritmaları
 
 - Prim ve Kruskal Algoritmalarının ikisi de her zaman aynı uzunluktaki sonucu verecektir.
