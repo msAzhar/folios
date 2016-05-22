@@ -4,7 +4,6 @@
 
 Azhar MURZAEVA
 
-Şeymanur ÇALIK
 
 `ALGORİTMALAR`
 
@@ -21,7 +20,6 @@ Mayıs 2016
 - Ağaç nedir?
 - Kullanılan alanlar
 - Minimum Kapsayan Ağaçlar nedir?
-- Kullanılan alanlar
 - Prim Algoritması
 - Kruskal Algoritması
 
@@ -44,23 +42,28 @@ Mayıs 2016
 
 <img src="pics/a.svg" >
 
+- Ağaçlar bir çok nedenden dolayı graf teorisi içerisinde önemli bir yere sahiptir. Ayrıca, ağaçlar graf teorisinin birçok uygulamasında ön plana çıkmaktadır.
+
 
 ###Kullanılan Alanlar
 
 - Matematikte
 - Fizikte
 - Biyolojide
+- Örneğin, bilgisayar bilimcileri, hiyerarşik veritabanı kullanarak belirli tipteki verilerin depolanma ve düzenlenme uygulamasını, ağaçları kullanarak gerçekleştirmişlerdir.
+- Bunlara ek olarak, sıralama, kodlama teorisi ve bazı optimizasyon problemlerinin incelenmesinde de ağaçlar kullanılmaktadır. 
 
 
-<img src="pics/a.svg" >
 
 
 ###Minimum Kapsayan Ağaç Nedir?
 
-- Düğümlerinin aralarında bağlantı olmayan bir graf verilsin. Bu graf için öyle bir ağaç bulunmalı ki, onun bütün güğümlerine bağlı olsun ve aynı anda olası olan bütün maliyetlerinin en azına sahip olsun. İşte böyle ağaca minimum kapsayan ağaç denmektedir.
+- Ağırlıklı bir grafta(weighted graph), yani birbirleri ile bağlantılı olan bütün düğümlerin yollarının maaliyetleri olan bir grafta, bütün düğümleri en kısa yol vercek şekilde dolaşan(kapsayan) bir ağaçtır.
 
 <img src="pics/mst.png" width=400 height=284>
 
+- Örneğin, hava yollarını en az maaliyetli şekilde ve döngüsüz olacak şekilde oluşturulmasında kullanılmaktadır.
+- Aynı şekilde şehirler arasında kara yolları oluşturmakta kullanılmaktadır. Örneğin, maaliyet olarak da dağlar, ırmaklar vs. göz önüne alınmaktadır. 
 
 ####Minimum Kapsayan Ağaç
 
@@ -119,6 +122,10 @@ Minimum kapsayan ağaç bulmak için çeşitli algoritmalar vardır. Bunlardan e
 
 Bu algoritma 1930 yılında matematikçi Vojtech Jarnik tarafından bulunmuştur. Daha sonra bağımsız olarak 1957'de bilgisayar bilimcisi Robert C. Prim ve 1959'da Dijkstra tarafından tekrar bulunmuştur. 
 
+ 1. Herhangi bir düğümi seç
+ 2. Bu düğüme bağlı olan en kısa kenarı seç
+ 3. Elimizde var olan bağlı düğümlerin birine bağlı olan en kısa kenarı seç
+ 4. Düğümler birbirlerine bağlı olana kadar 3.Adımı tekrarla
 ####Prim Algoritması(Devamı)
 
 <img src="pics/o.png" style="float: center" width=400 height=336>
@@ -196,6 +203,32 @@ Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıd�
 
 <img src="pics/k6.png" style="float: center" width=400 height=336>
 
+####Kruskal Algoritması(Devamı)
+
+```python 
+def kruskal(graph):
+    for vertice in graph['vertices']:
+	make_set(vertice)
+	minimum_spanning_tree = set()
+	edges = list(graph['edges'])
+	edges.sort()
+	#print edges
+    for edge in edges:
+	weight, vertice1, vertice2 = edge
+	if find(vertice1) != find(vertice2):
+	    union(vertice1, vertice2)
+	    minimum_spanning_tree.add(edge)
+	    
+    return sorted(minimum_spanning_tree)
+```
+####Prim ve Kruskal Algoritmaları
+
+- Prim ve Kruskal Algoritmalarının ikisi de her zaman aynı uzunluktaki sonucu verecektir.
+
+- Bu algoritmalar minimum kapsayan ağaç oluştururken, genelde kenarları farklı sırayla seçmektedir.
+
+- Bazen ise farklı kenarları da seçebilirler. Örneğin, en son kalan iki farklı düğüme bağlanan kenar maaliyetleri aynı olduğu zaman.
+
 ####Kaynaklar
 
 - https://en.wikipedia.org/wiki/Graph
@@ -205,7 +238,7 @@ Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıd�
 -https://www.youtube.com/watch?v=8fJgkVpxbQg
 - https://www.youtube.com/watch?v=5XkK88VEILk
 - https://www.youtube.com/watch?v=Pn874kEc3IA
-
+- https://github.com/israelst/Algorithms-Book--Python/blob/master/5-Greedy-algorithms/kruskal.py
 
 
 ####Minimum Kapsayan Ağaçlar
@@ -214,3 +247,50 @@ Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıd�
 - Sorular???
 <img src="r.png" style="float: center">
 
+
+####Küçük Test
+
+- Soru1: Aşağıdakilerden hangisi Minimum Kapsayan Ağaç oluşturabilmek için gerekli bir graf özelliğidir? Graf nasıl bir Graf olmalı?<br>
+ <br>
+ a) Bağlı olmayan bir Graf<br> 
+ <br>
+ b) Ağırlıklı bir Graf<br>
+ <br>
+ c) Döngülü bir Graf<br>
+
+####Küçük Test
+
+- Soru2: Aşağıdakilerden hangisi Ağaçtır?<br>
+ <br>
+<table>
+<tr>
+<td>1.resim</td>
+<td>2.resim</td>
+<td>3.resim</td>
+</tr>
+<tr>
+<td><img src="pics/r1.png" style="float: center" width=150 height=150></td>
+<td><img src="pics/r2.png" style="float: center" width=150 height=150></td>
+<td><img src="pics/r3.png" style="float: center" width=150 height=150></td>
+</tr>
+</table>
+ a) Hepsi<br> 
+ <br>
+ b) Sadece 2.resim<br>
+ <br>
+ c) 1.resim ve 2.resim<br>
+
+####Küçük Test
+
+- Soru3: Aşağıdakilerden hangisi yanlıştır?<br>
+ <br>
+ a) Prim algoritması Kruskal algoritmasının seçtiği kenarın aynısını seçmektedir.<br> 
+ <br>
+ b) Prim ve Kruskal Algoritmalarının ikisi de her zaman aynı uzunluktaki sonucu verecektir<br>
+ <br>
+ c) Kruskal algoritması her seferinde en iyi kenarın seçilmesi esasına dayalıdır.<br>
+
+####Küçük Test Cevap Anahtarı
+- Cevap1: b) Ağırlıklı bir Graf<br>
+- Cevap2: a) Hepsi<br>
+- Cevap3: a) Prim algoritması Kruskal algoritmasının seçtiği kenarın aynısını seçmektedir.<br>
